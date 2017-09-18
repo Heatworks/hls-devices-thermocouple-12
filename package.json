@@ -1,0 +1,25 @@
+{
+    "name": "hls-devices-thermocouple-12",
+    "version": "0.0.1",
+    "description": "Package for setting up the hls device Thermocouple12.",
+    "main": "start.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node start.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Heatworks/hls-devices-thermocouple-12.git"
+    },
+    "author": "",
+    "license": "UNLICENSED",
+    "bugs": {
+      "url": "https://github.com/Heatworks/hls-devices-thermocouple-12/issues"
+    },
+    "homepage": "https://github.com/Heatworks/hls-devices-thermocouple-12#readme",
+    "dependencies": {
+      "prompt": "^1.0.0",
+      "randomstring": "^1.1.5"
+    }
+  }
+  
