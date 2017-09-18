@@ -52,13 +52,15 @@ sudo npm install @heatworks/node-red-contrib-adafruit-max31855
 
 ### Add this Repo
 
-Clone this repo and setup environment variables in `/home/pi/profile`.
+Clone this repo and setup environment variables in `/home/pi/.profile`.
 
 ```
 export NODE_RED_CRED_FILE=/home/pi/.node-red/flows_default_cred.json
 export NODE_RED_FLOW_FILE=/home/pi/.node-red/flows_default.json
 export NODE_RED_SETTINGS_FILE=/home/pi/.node-red/settings.js
 ```
+
+Run through setup once with default values. May need to remove `~/.node-red/.config.json` file as it may have automatically generated credentials.
 
 ### CronTab
 
@@ -67,7 +69,7 @@ Open crontab `crontab -e` and add this line `@reboot bash /home/pi/hls-devices-t
 ### Create Log File
 
 ```
-sudo touch node-red.log
+sudo touch /var/log/node-red.log
 sudo chown pi:pi /var/log/node-red.log 
 ```
 

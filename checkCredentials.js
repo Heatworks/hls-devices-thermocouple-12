@@ -19,4 +19,4 @@ function decryptNodeRED() {
 
 //console.log(JSON.stringify(decryptNodeRED()));
 
-//console.log(updateFlowFile('heatworks', 'analog8/unknown2'));
+//console.log(updateFlowFile('heatworks', 'thermocouple12/unknown2'));

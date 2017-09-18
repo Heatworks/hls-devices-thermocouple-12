@@ -32,8 +32,8 @@ var schema = {
       deviceName: {
         pattern: /^[a-zA-Z\-0-9\/]+$/,
         message: 'Name must be only letters, numbers, dashes, or slashes',
-        description: 'Enter a name for the device (i.e. "analog8/B", "analog8/Station1")', 
-        default: 'analog8/unknown',       
+        description: 'Enter a name for the device (i.e. "thermocouple12/B", "thermocouple12/Station1")', 
+        default: 'thermocouple12/unknown',       
         required: true
       },
       accessToken: {
@@ -47,7 +47,7 @@ var schema = {
 prompt.get(schema, function (err, result) {
     
     var organization = result.organization// "heatworks"
-    var deviceName = result.deviceName // "analog8/unknown"
+    var deviceName = result.deviceName // "thermocouple12/unknown"
     var accessToken = result.accessToken // "defaultAccessToken"
 
     var setNodeREDSecurityKey = require("./basics.js").setNodeREDSecurityKey;
