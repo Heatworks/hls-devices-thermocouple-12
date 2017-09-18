@@ -1,6 +1,17 @@
 # HLS Devices - Thermocouple12
 Code and setup instructions for the HSL Thermocouple12 Board.
 
+## Setup
+
+1. Connect via UART with username `pi` and password `raspberry`.
+2. Change default password from `raspberry` to whatever you want. This can be done using `sudo raspi-config` and pressing enter or running `passwd`.
+3. Change host name from `hls-device-thermocouple-12-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-thermocouple-12-a" > /etc/hostname` echoing your desired hostname.
+4. (optional) Enable SSH either through `raspi-config` or running `systemctl enable ssh.socket`.
+5. Reboot to see changes. (`sudo reboot`)
+6. Get latest setup script `cd /home/pi/hls-devices-thermocouple-12/ && git pull`.
+7. Run setup script `cd /home/pi/hls-devices-thermocouple-12/ && bash setup.sh` and answer prompts.
+8. Reboot to see changes. (`sudo reboot`)
+
 ## Base Image
 The following are the instructions for creating the base image for the Thermocouple12 board, using a copy of this image will contain all the following edits. Begin with the default raspbian lite image.
 
@@ -72,18 +83,6 @@ Open crontab `crontab -e` and add this line `@reboot bash /home/pi/hls-devices-t
 sudo touch /var/log/node-red.log
 sudo chown pi:pi /var/log/node-red.log 
 ```
-
-## Setup
-
-1. Connect via UART with username `pi` and password `raspberry`.
-2. Change default password from `raspberry` to whatever you want. This can be done using `sudo raspi-config` and pressing enter or running `passwd`.
-3. Change host name from `hls-device-thermocouple-12-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-thermocouple-12-a" > /etc/h 
-ostname` echoing your desired hostname.
-4. (optional) Enable SSH either through `raspi-config` or running `systemctl enable ssh.socket`.
-5. Reboot to see changes. (`reboot`)
-6. Get latest setup script `cd /home/pi/hls-devices-thermocouple-12/ && git pull`.
-7. Run setup script `cd /home/pi/hls-devices-thermocouple-12/ && bash setup.sh` and answer prompts.
-8. Reboot to see changes. (`reboot`)
 
 ## Future
 
