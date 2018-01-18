@@ -4,7 +4,7 @@ Code and setup instructions for the HSL Thermocouple12 Board.
 ## Setup
 
 1. Connect via UART with username `pi` and password `raspberry`.
-2. Change default password from `raspberry` to whatever you want. This can be done using `sudo raspi-config` and pressing enter or running `passwd`.
+2. Change default password from `raspberry` to whatever you want. This can be done running `passwd` or using `raspi-config`.
 3. Change host name from `hls-device-thermocouple-12-unknown` to whatever you want. This can be done by running `sudo su && echo "hls-device-thermocouple-12-a" > /etc/hostname` echoing your desired hostname.
 4. (optional) Enable SSH either through `raspi-config` or running `systemctl enable ssh.socket`.
 5. Reboot to see changes. (`sudo reboot`)
@@ -35,7 +35,7 @@ sudo npm install -g node-red
 
 Begin by running node red, this generates the flow and settings files.
 
-Edit `~/.node-red/settings.js` and change the `flowFile` option to `flows_default.json`.
+Edit `~/.node-red/settings.js`. Change the `flowFile` option to `flows_default.json` and remove the `credentialSecret` value.
 
 ### Enable SPI
 
