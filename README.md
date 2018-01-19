@@ -63,7 +63,7 @@ sudo npm install @heatworks/node-red-contrib-adafruit-max31855
 
 ### Add this Repo
 
-Clone this repo and setup environment variables in `/home/pi/.profile`.
+Clone this repo into `/home/pi` and setup environment variables in `/home/pi/.profile`.
 
 ```
 export NODE_RED_CRED_FILE=/home/pi/.node-red/flows_default_cred.json
