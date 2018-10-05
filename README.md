@@ -27,7 +27,7 @@ sudo apt-get install node npm git
 
 sudo npm cache clean -f
 sudo npm install -g n
-sudo n 6.* 
+n 6.* 
 sudo npm install -g node-red
 ```
 
@@ -35,7 +35,7 @@ sudo npm install -g node-red
 
 Begin by running node red, this generates the flow and settings files.
 
-Edit `~/.node-red/settings.js`. Change the `flowFile` option to `flows_default.json` and remove the `credentialSecret` value.
+Edit `~/.node-red/settings.js`. Change the `flowFile` option to `flows_default.json` and remove the `credentialSecret` value. 
 
 ### Enable SPI
 
@@ -45,7 +45,7 @@ Enable SPI using `sudo raspi-config`.
 
 ```bash
 cd ~/
-sudo apt-get install python-dev
+sudo apt-get install build-essential python-dev python-smbus
 git clone https://github.com/adafruit/Adafruit_Python_GPIO.git
 cd Adafruit_Python_GPIO
 sudo python setup.py install
@@ -82,6 +82,14 @@ Open crontab `crontab -e` and add this line `@reboot bash /home/pi/hls-devices-t
 ```
 sudo touch /var/log/node-red.log
 sudo chown pi:pi /var/log/node-red.log 
+```
+
+### /boot/config.txt
+
+```
+dtoverlay=enc28j60,int_pin=25,speed=12000000
+enable_uart=1
+dtparam=spi=on
 ```
 
 ## Future
